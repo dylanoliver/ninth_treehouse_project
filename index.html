@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web App Dashboard</title>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/styles4.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <script src="https://use.fontawesome.com/049e9565df.js"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+	<header class="main-header">
+		<h1 class="name"><a href="#">YourApp<span class="tm">&trade;</span></a></h1>
+		<ul class="main-header-nav">
+			<li>
+				<a href="#">
+					<img class="main-header-nav-icon" src="icons/icon-bell.svg" alt="Bell">
+					<span>
+						<svg class="dot" height="10" width="10">
+						  <circle cx="4" cy="5" r="4" stroke="#83C891" stroke-width="1" fill="#83C891"></circle>
+						</svg>
+					</span>
+				</a>
+			</li>
+
+			<li class="dylan"><a href="#">Dylan Oliver</a></li>
+			<li><a href="#"><img class="main-header-nav-avatar" src="icons/dylan.svg" alt="avatar"></a></li>
+		</ul>
+	</header>
+
+	<div id="main">
+		<nav>
+			<ul class="main-nav">
+				<li><a href="#"><img class="main-nav-icon" alt="Dashboard" src="icons/icon-dashboard.svg"></a></li>
+				<li><a href="#"><img class="main-nav-icon" alt="Members" src="icons/icon-members.svg"></a></li>
+				<li><a href="#"><img class="main-nav-icon" alt="Visits" src="icons/icon-visits.svg"></a></li>
+				<li><a href="#"><img class="main-nav-icon" alt="Settings" src="icons/icon-settings.svg"></a></li>
+			</ul>
+		</nav>
+	<section>
+		<div class="app-dash">
+			<h2 class="app-dash-item">Dashboard</h2>
+			<form class="app-dash-item">
+				<input type="text" id="search-top-dashboard" name="text" placeholder="Search">
+			</form>
+		</div>
+
+		<div class="alert">
+			<p class="alert-para">Alert! <span>Sign Up for Treehouse</span>
+			<span class="close" onclick="this.parentElement.style.display='none';">×</span></p>
+		</div>	
+
+		<div class="row">		
+			<div class="primary col">
+				<div class="traffic">
+					<h3>Traffic</h3>
+					<ul>
+						<li>Hourly</li>
+						<li>Daily</li>
+						<li class="active">Weekly</li>
+						<li>Monthly</li>
+					</ul>
+				</div><!--/.traffic-->
+				<div class="ct-chart ct-golden-section" id="chart1"></div>
+			</div><!--/.primary-->
+		</div><!--/.row-->
+		<div class="row">	
+			<div class="secondary col">
+				<h3>Daily Traffic</h3>
+				<div class="ct-chart ct-golden-section" id="chart2"></div>
+			</div><!--/.secondary-->	
+			<div class="tertiary col">
+				<h3>Mobile Users</h3>
+				<div class="ct-chart ct-golden-section" id="chart3"></div>
+			</div><!--/.tertiary-->	
+		</div><!--/.row-->
+		<div class="row">
+			<div class="primary col">
+				<h3>Social Stats</h3>
+					 <div class="social">
+						<div class="item one">
+							<div class="img-left">
+								<img src="icons/icon-twitter.svg" alt="Twitter">
+							</div>
+							<div class="para-right">
+								<p class="para-social">Twitter</p>
+								<p class="para-number">10,435</p>
+							</div>
+						</div>
+
+						<div class="item two">
+							<div class="img-left">
+								<img src="icons/icon-facebook.svg" alt="Facebook">
+							</div>
+							<div class="para-right">
+								<p class="para-social">Facebook</p>
+								<p class="para-number">8,739</p>
+							</div>
+						</div>
+
+						<div class="item three">
+							<div class="img-left">
+								<img src="icons/icon-google-plus.svg" alt="Google+">
+							</div>
+							<div class="para-right">
+								<p class="para-social">Google+</p>
+								<p class="para-number">2,530</p>
+							</div>
+						</div>
+					</div><!--/.social-->					
+			</div><!--/.primary-->
+		</div><!--/.row-->
+		<div class="row" id="tables">	
+			<div class="secondary col">
+				<h4>New Members</h4>
+				<div class="members-table">
+					<table>
+						<tbody>
+						<tr>
+							<td><img src="icons/victoria.svg" alt=""></td>
+							<td><p class="member-name">Victoria Chambers</p><p class="member-email">victoria.chambers80@example.com</p></td>
+							<td><p>10/15/15</p></td>
+						</tr>
+						<tr>
+							<td><img src="icons/dale.svg" alt=""></td>
+							<td><p class="member-name">Dale Byrd</p><p class="member-email">dale.byrd52@example.com</p></td>
+							<td><p>10/15/15</p></td>
+						</tr>
+						<tr>
+							<td><img src="icons/dawn.svg" alt=""></td>
+							<td><p class="member-name">Dawn Wood</p><p class="member-email">dawn.wood16@example.com</p></td>
+							<td><p>10/15/15</p></td>
+						</tr>
+						<tr>
+							<td><img src="icons/dan.svg" alt="Dan's avatar image"></td>
+							<td><p class="member-name">Dan Oliver</p><p class="member-email">dan.oliver82@example.com</p></td>
+							<td><p>10/15/15</p></td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+			</div><!--/.secondary-->	
+			<div class="tertiary col">
+				<h4>Recent Activity</h4>
+				<div class="members-table">
+					<table>
+						<tbody>
+						<tr>
+							<td><img src="icons/victoria.svg" alt=""></td>
+							<td><p>Victoria Chambers commented on YourApp's SEO Tips</p><p class="bold">4 hours ago</p></td>
+							<td><i class="fa fa-comment-o" aria-hidden="true"></i></td>
+						</tr>
+						<tr>
+							<td><img src="icons/dale.svg" alt=""></td>
+							<td><p>Dale Byrd liked the post Facebook's Changes for 2016</p><p>5 hours ago</p></td>
+							<td><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></td>
+						</tr>
+						<tr>
+							<td><img src="icons/dawn.svg" alt=""></td>
+							<td><p>Dawn Wood commented on Facebook's Changes for 2016</p><p>5 hours ago</p></td>
+							<td><i class="fa fa-comment-o" aria-hidden="true"></i></td>
+						</tr>
+						<tr>
+							<td><img src="icons/dan.svg" alt=""></td>
+							<td><p>Dan Oliver posted YourApp's SEO Tips</p><p>1 day ago</p></td>
+							<td><i class="fa fa-envelope-o" aria-hidden="true"></i></td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+			</div><!--/.tertiary-->	
+		</div><!--/.row-->
+
+		<div class="row">	
+			<div class="secondary col">
+				<h4>Message Users</h4>
+					<form method="post" class="message-users" id="sendMessage" novalidate="novalidate">
+						<input type="text" id="search-user" name="searchuser" placeholder="Search for User">
+						<textarea name="comments" id="comments" placeholder="Message for User" class="send-message"></textarea>
+						<p id="warning"></p>
+						<button id="send" type="button">Send</button>
+					</form>
+			</div><!--/.secondary-->
+
+			<div class="tertiary col">
+				<h4>Settings</h4>
+				<div class="email-notice">
+					<div class="settings-para">
+						<p>Send Email Notifications</p>
+					</div>
+					<div class="settings-toggle">
+						<div class="onoffswitch">
+					    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+					    <label class="onoffswitch-label" for="myonoffswitch">
+					        <span class="onoffswitch-inner"></span>
+					        <span class="onoffswitch-switch"></span>
+					    </label>
+						</div>
+					</div>
+				</div><!--/.email-notice-->
+				<div class="email-notice">
+					<div class="settings-para">
+						<p>Set Profile to Public</p>
+					</div>
+					<div class="settings-toggle">
+						<div class="onoffswitch">
+					    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2" checked>
+					    <label class="onoffswitch-label" for="myonoffswitch2">
+					        <span class="onoffswitch-inner"></span>
+					        <span class="onoffswitch-switch"></span>
+					    </label>
+						</div>
+					</div>
+				</div><!--/.email-notice-->
+				<div class="timezone">
+					<select>
+						<option value="0" disabled selected>Select Timezone</option>
+			      <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
+			      <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
+			      <option value="-10.0">(GMT -10:00) Hawaii</option>
+			      <option value="-9.0">(GMT -9:00) Alaska</option>
+			      <option value="-8.0">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+			      <option value="-7.0">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+			      <option value="-6.0">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+			      <option value="-5.0">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+			      <option value="-4.0">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+			      <option value="-3.5">(GMT -3:30) Newfoundland</option>
+			      <option value="-3.0">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+			      <option value="-2.0">(GMT -2:00) Mid-Atlantic</option>
+			      <option value="-1.0">(GMT -1:00 hour) Azores, Cape Verde Islands</option>
+			      <option value="0.0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+			      <option value="1.0">(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
+			      <option value="2.0">(GMT +2:00) Kaliningrad, South Africa</option>
+			      <option value="3.0">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+			      <option value="3.5">(GMT +3:30) Tehran</option>
+			      <option value="4.0">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+			      <option value="4.5">(GMT +4:30) Kabul</option>
+			      <option value="5.0">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+			      <option value="5.5">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+			      <option value="5.75">(GMT +5:45) Kathmandu</option>
+			      <option value="6.0">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+			      <option value="7.0">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+			      <option value="8.0">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+			      <option value="9.0">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+			      <option value="9.5">(GMT +9:30) Adelaide, Darwin</option>
+			      <option value="10.0">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+			      <option value="11.0">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+			      <option value="12.0">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+					</select>
+				</div>
+				<div class="save-cancel">
+					<button>Save</button>
+					<button>Cancel</button>
+				</div>
+			</div><!--/.tertiary-->	
+		</div><!--/.row-->
+	</section>
+
+	<footer>
+		<p>Dylan Oliver &copy;2016</p>
+	</footer>
+</div><!--/#main-->
+</div><!--/#wrapper-->
+<script type="text/javascript" src="js/chartist-plugin-legend.js"></script>
+<script src="js/linechart.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/submit.js"></script>
+</body>
+</html>
