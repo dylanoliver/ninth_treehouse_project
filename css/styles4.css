@@ -132,6 +132,10 @@ a {
 	width: 30px;
 }
 
+ul.navigation li a {
+	color: inherit;
+}
+
 /* ---- Layout Containers ---- */
 
 .main-header {
